@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Jimena Ríos QR</title>
+  </head>
+  <body >
+
+<!-- Background --> 
+<svg style="position: absolute; width: 100%; height: 100%; z-index: 0;" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dottedGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+    </pattern>
+  </defs>
+
+  <!-- Fondo con imagen -->
+  <image href="https://images.unsplash.com/photo-1619922800069-098b291b8f17?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" x="0" y="0" height="100%"></image>
+
+  <rect width="100%" height="100%" fill="url(#dottedGrid)" />
+</svg>
+
+<div class="image-container">
+      <img src="https://scontent-phx1-1.xx.fbcdn.net/v/t39.30808-6/481076480_1566305214308798_7996448702610942502_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=d2IV1TqW0R0Q7kNvgFViIYv&_nc_oc=AdieXp0anhZ9SAPspH7C1FNzPYLDvNNlu-htTdI6gphsDKw5_YluIt1DMry0x0lnado&_nc_zt=23&_nc_ht=scontent-phx1-1.xx&_nc_gid=8_LM6b0V2Ji7A4iQ9xKnDw&oh=00_AYFuOAur1BLMKOTAb3bdYPWO4HqgudnO2GO55GoC3NdS-g&oe=67DB7DAA" alt="Imagen con borde de cristal"  id="fullscreen-button">
+    </div>
+ <!-- Button -->
+<!-- Botón para activar la cámara -->
+  <div class="button-wrap">
+    <button id="start-camera">
+      <span>Visita</span>
+    </button>
+    <div class="button-shadow"></div>
+  </div>
+<!-- Popup de estilo glass -->
+<div id="glass-popup" class="popup">
+  <div class="popup-content">
+    <p id="qr-content" style="display:none;"></p>
+      <iframe id="fuente" src="fuenteLocal" frameborder="0" scrolling="no"></iframe>
+    <button id="close-popup">
+      <span>Cerrar</span>
+    </button>
+    </div>
+  </div>
+  <footer>
+    <img src="https://i.imgur.com/oH6Asxx.png" style="vertical-align:middle; opacity:0.6;" width="38px" height="38px">
+    <span style="font-size:28px; vertical-align:middle; color:black;opacity:0.6;">
+     Prepare su QR</span>
+  </footer>
+<footer id="camara-container" style="display: none;">
+<div style="text-align:right;margin-right:25px;">
+  <a onclick="detenerCamara();"><i class="material-icons">close</i></a>
+</div>
+    <video id="video" width="198" height="264" autoplay></video>
+  <!-- Campo de texto donde se muestra el contenido del QR -->
+  <input type="text" id="qr-text" placeholder="El código QR aparecerá aquí" style="display:none;">
+</footer>
+  </body>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+  <script src="script.js"></script>
+</html>
